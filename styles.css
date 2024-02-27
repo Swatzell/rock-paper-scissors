@@ -2,8 +2,55 @@ body {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+    display:flex;
+    flex-direction: row;
+    background-color:skyblue
   }
   
   .hidden {
     display: none;
   }
+
+  .main-game-section{
+    display:flex;
+    flex-direction: column;
+    width:75%
+
+  }
+
+  header{
+    text-align: center;
+  }
+
+  .header {
+    /* display: flex; */
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .human-win-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: white; */
+  }
+
+  .human-win-section {
+    display: flex;
+    border: black solid 1px;
+    width:25%
+  }
+
+  .computer-win-section {
+    display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+flex-wrap: wrap;
+width:25%;
+border: 1px solid black;
+height: 100vh;
+  }
+
+  

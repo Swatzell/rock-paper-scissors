@@ -1,5 +1,5 @@
 body {
-    font-family: "Itim", cursive;
+    font-family: "Arvo", serif;
     font-weight: 400;
     font-style: normal;
     display:flex;
@@ -36,6 +36,10 @@ body {
     /* background-color: white; */
   }
 
+  .main-title{
+    font-size: 80px;
+  }
+
   .human-win-section {
     display: flex;
     border: black solid 1px;
@@ -53,4 +57,24 @@ border: 1px solid black;
 height: 100vh;
   }
 
-  
+  .game-type-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+
+  .difficult-game-box,
+  .classic-game-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 213, 255);
+    width:280px;
+    margin-bottom: 20px;
+  }
+
+  .difficult-game-box > h3,
+  .classic-game-box > h3 {
+    margin:0%
+  }

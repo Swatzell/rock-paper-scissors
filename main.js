@@ -13,7 +13,7 @@ var scissorsFighter = document.querySelector(".scissors-fighter");
 var iguanaFighter = document.querySelector(".iguana-fighter");
 var alienFighter = document.querySelector(".alien-fighter");
 var changeGameButton = document.querySelector(".change-game-button");
-
+var chooseGameHeader = document.querySelector(".choose-game")
 
 
 
@@ -24,12 +24,14 @@ changeGameButton.addEventListener('click',changeGame)
 
 
 function showClassicGame(){
+    chooseGameHeader.innerText = "Choose your fighter!";
     gameSelectScreen.classList.add("hidden");
     classicGameView.classList.remove("hidden");
     changeGameButton.classList.remove("hidden");
 }
 
 function showDifficultGame(){
+    chooseGameHeader.innerText = "Choose your fighter!";
     gameSelectScreen.classList.add("hidden");
     classicGameView.classList.remove("hidden");
     difficultGameView.classList.remove("hidden");
@@ -37,6 +39,7 @@ function showDifficultGame(){
 }
 
 function changeGame(){
+    chooseGameHeader.innerText = "Choose your game!";
     gameSelectScreen.classList.remove("hidden");
     classicGameView.classList.add("hidden");
     difficultGameView.classList.add("hidden");

@@ -8,55 +8,65 @@ body {
   }
   
   .hidden {
-    display: none;
+    visibility: hidden;
   }
 
   .main-game-section{
     display:flex;
     flex-direction: column;
     width:75%
-
   }
 
   .header {
-    /* display: flex; */
     justify-content: flex-start;
     text-align: center;
     flex-direction: column;
   }
+  
   .header > h1{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
     font-size: 80px;
   }
 
   .header > h3 {
+    margin-top: 20px;
     margin-bottom: 100px;
-  }
-
-  .human-win-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: black solid 1px;
-    width:25%;
-    height:100vh
-    /* background-color: white; */
+    font-size: 30px;
   }
 
 
-  .computer-win-section {
+   .computer-win-section,
+   .human-win-section  {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    width:25%;
-    border: 1px solid black;
+    width:15%;
     height: 100vh;
+    background-color:rgb(102, 186, 219);
   }
 
-  .game-type-section{
+  .computer-emoji,
+  .human-emoji {
+    margin-bottom: 0px;
+  }
+
+  .human-text,
+  .computer-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .change-game-button {
+    margin-top: 100px;
+    background-color: rgb(0, 221, 136);
+    height: 60px;
+    width: 150px;
+  }
+
+  .game-type-view{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -73,9 +83,24 @@ body {
     margin-bottom: 20px;
   }
 
-  .difficult-game-box > h3,
-  .classic-game-box > h3 {
-    margin:0%
+  
+  .paper-rock,
+  .paper-rock-alien,
+  .scissors-paper-lizard,
+  .lizard-paper-alien {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .rock-scissors,
+  .rock-scissors-lizard {
+    margin-bottom: 0px;
+  }
+
+  .scissors-paper,
+  .alien-scissors-rock {
+    margin-top: 0px;
+    margin-bottom: 50px;
   }
 
   .classic-game-view,
@@ -86,14 +111,14 @@ body {
   }
 
   .classic-game-view > img {
-    height: 250px;
-    width: 250px
+    height: 200px;
+    width: 200px
   }
 
   .difficult-game-view > img {
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    height: 250px;
-    width: 250px
+    height: 200px;
+    width: 200px
   }

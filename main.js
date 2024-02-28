@@ -13,3 +13,32 @@ var scissorsFighter = document.querySelector(".scissors-fighter");
 var iguanaFighter = document.querySelector(".iguana-fighter");
 var alienFighter = document.querySelector(".alien-fighter");
 var changeGameButton = document.querySelector(".change-game-button");
+
+
+
+
+classicGameBox.addEventListener('click',showClassicGame)
+difficultGameBox.addEventListener('click',showDifficultGame)
+changeGameButton.addEventListener('click',changeGame)
+
+
+
+function showClassicGame(){
+    gameSelectScreen.classList.add("hidden");
+    classicGameView.classList.remove("hidden");
+    changeGameButton.classList.remove("hidden");
+}
+
+function showDifficultGame(){
+    gameSelectScreen.classList.add("hidden");
+    classicGameView.classList.remove("hidden");
+    difficultGameView.classList.remove("hidden");
+    changeGameButton.classList.remove("hidden");
+}
+
+function changeGame(){
+    gameSelectScreen.classList.remove("hidden");
+    classicGameView.classList.add("hidden");
+    difficultGameView.classList.add("hidden");
+    changeGameButton.classList.add("hidden");
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Itim&display=swap" rel="stylesheet">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body class="body">
+        <aside class="human-win-section">
+            <h1 class="human-emoji">👱🏻👩‍🦳</h1>
+            <h2 class="human-text">HUMAN</h2>
+            <h3 class="human-wins">Wins: 0</h3>
+            <button class="change-game-button hidden" type="submit">Change Game?</button>
+        </aside>
+        <section class="main-game-section">
+            <header class="header">
+                <h1 class="main-title">Rock, Paper, Scissors</h1>
+                <h3 class="choose-game">Choose your game!</h3>
+            </header>
+            <section class="game-type-view">
+                <div class="classic-game-box">
+                    <h2 class="classic-header">🤘Classic🤘</h2>
+                    <h3 class="rock-scissors">rock > scissors</h3>
+                    <h3 class="paper-rock">paper > rock</h3>
+                    <h3 class="scissors-paper">scissors > paper</h3>
+                </div>
+                <div class="difficult-game-box">
+                    <h2 class="difficult-header">👾Difficult👾</h2>
+                    <h3 class="rock-scissors-lizard">rock > scissors & lizard</h3>
+                    <h3 class="paper-rock-alien">paper > rock & alien</h3>
+                    <h3 class="scissors-paper-lizard">scissors > paper & lizard</h3>
+                    <h3 class="lizard-paper-alien">lizard > paper & alien</h3>
+                    <h3 class="alien-scissors-rock">alien > scissors & rock</h3>
+                </div>
+            </section>
+            <section class="classic-game-view hidden">
+                <img class="rock-fighter" src="./assets/rock-hand.png" alt="rock hand">
+                <img class="paper-fighter" src="./assets/happy-paper.png" alt="paper">
+                <img class="scissors-fighter" src="./assets/lines-scissors.png" alt="scissors">
+            </section>
+            <section class="difficult-game-view hidden">
+                <img class="iguana-fighter" src="./assets/iguana.png" alt="iguana">
+                <img class="alien-fighter" src="./assets/flat-alien.png" alt="alien">
+            </section>
+        </section>
+        <aside class="computer-win-section">
+            <h1 class="computer-emoji">💻</h1>
+            <h2 class="computer-text">COMPUTER</h2>
+            <h3 class="computer-wins">Wins: 0</h3>
+        </aside>
+    </body>
+    <script type="text/javascript" src="main.js"></script>
+</html>

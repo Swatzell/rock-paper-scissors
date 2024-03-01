@@ -28,3 +28,17 @@ var computerChoice
 var difficultComputer
 var humanPlayer = createPlayer('Human', '👱🏻');
 var computerPlayer = createPlayer('Computer', '💻')
+
+
+
+
+
+function createPlayer(name, token) {
+    
+    return {
+    name: name,
+    token: token,
+    wins: 0
+    };
+}
+    

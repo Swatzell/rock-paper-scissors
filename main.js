@@ -22,3 +22,9 @@ var lizardFighter = document.querySelector(".lizard-fighter");
 var userChoice = document.querySelector(".user-choice");
 
 
+
+var humanChoice
+var computerChoice
+var difficultComputer
+var humanPlayer = createPlayer('Human', '👱🏻');
+var computerPlayer = createPlayer('Computer', '💻')

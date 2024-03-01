@@ -33,6 +33,32 @@ var computerPlayer = createPlayer('Computer', '💻')
 
 
 
+function showClassicGame(){
+    chooseGameHeader.innerText = "Choose your fighter!";
+    gameSelectScreen.classList.add("hidden");
+    classicGameView.classList.remove("hidden");
+    changeGameButton.classList.remove("hidden");
+}
+
+function showDifficultGame(){
+    chooseGameHeader.innerText = "Choose your fighter!";
+    gameSelectScreen.classList.add("hidden");
+    classicGameView.classList.add("hidden");
+    difficultGameView.classList.remove("hidden");
+    changeGameButton.classList.remove("hidden");
+}
+
+function changeGame(){
+    chooseGameHeader.innerText = "Choose your game!";
+    gameSelectScreen.classList.remove("hidden");
+    classicGameView.classList.add("hidden");
+    difficultGameView.classList.add("hidden");
+    changeGameButton.classList.add("hidden");
+}
+
+
+
+
 function createPlayer(name, token) {
     
     return {

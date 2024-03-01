@@ -42,3 +42,17 @@ function createPlayer(name, token) {
     };
 }
     
+
+function generateClassicComputerChoice() {
+    var classicChoices = ['rock', 'paper', 'scissors'];
+    var randomIndex = Math.floor(Math.random() * classicChoices.length);
+    computerChoiceGlobalVariable = classicChoices[randomIndex]
+    return classicChoices[randomIndex];
+}
+
+function generateDifficultComputerChoice() {
+    var difficultChoices = ['rock', 'paper', 'scissors','lizard','alien'];
+    var randomIndex = Math.floor(Math.random() * difficultChoices.length);
+    difficultComputerChoiceGlobalVariable = difficultChoices[randomIndex]
+    return difficultChoices[randomIndex];
+}

@@ -4,7 +4,8 @@ body {
     font-style: normal;
     display:flex;
     flex-direction: row;
-    background-color:skyblue
+    background-color:skyblue;
+    margin:0%
   }
   
   .hidden {
@@ -124,11 +125,16 @@ body {
   }
   
 
-  .classic-game-view,
-  .difficult-game-view {
+  .classic-game-view {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .difficult-game-view {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
   }
 
   .classic-game-view > img {
@@ -137,13 +143,15 @@ body {
   }
 
   .difficult-game-view > img {
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 50px; 
     margin-right: 50px;
     height: 200px;
     width: 200px
   }
+.fighter-game-view{
+  display:flex;
 
+}
   .hidden {
     display: none !important;
   }

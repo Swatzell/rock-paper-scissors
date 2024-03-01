@@ -24,8 +24,8 @@ var userChoice = document.querySelector(".user-choice");
 
 
 var humanChoice
-var computerChoice
-var difficultComputer
+var classicComputerChoice
+var difficultComputerChoice
 var humanPlayer = createPlayer('Human', '👱🏻');
 var computerPlayer = createPlayer('Computer', '💻')
 
@@ -72,13 +72,57 @@ function createPlayer(name, token) {
 function generateClassicComputerChoice() {
     var classicChoices = ['rock', 'paper', 'scissors'];
     var randomIndex = Math.floor(Math.random() * classicChoices.length);
-    computerChoiceGlobalVariable = classicChoices[randomIndex]
+    classicComputerChoice = classicChoices[randomIndex]
     return classicChoices[randomIndex];
 }
 
 function generateDifficultComputerChoice() {
     var difficultChoices = ['rock', 'paper', 'scissors','lizard','alien'];
     var randomIndex = Math.floor(Math.random() * difficultChoices.length);
-    difficultComputerChoiceGlobalVariable = difficultChoices[randomIndex]
+    difficultComputerChoice = difficultChoices[randomIndex]
     return difficultChoices[randomIndex];
+}
+
+
+function classicWinConditions() {
+        
+    if (
+        (humanChoice === "rock" && classicComputerChoice === "scissors") ||
+        (humanChoice === "paper" && classicComputerChoice === "rock") ||
+        (humanChoice === "scissors" && classicComputerChoice === "paper")
+    ) {
+        humanPlayer.wins++;
+        humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
+        chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
+    } else if (humanChoice === classicComputerChoice) {
+        chooseGameHeader.innerText = `Its a draw!`;
+
+    } else {
+        computerPlayer.wins++;
+        computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
+        chooseGameHeader.innerText = `Mwahahaha ${computerPlayer.name} wins again!`;
+    }
+    
+}
+
+function difficultWinConditions() {
+    if (
+        (humanChoice === 'rock' && (difficultComputerChoice === 'scissors' || difficultComputerChoice === 'lizard')) ||
+        (humanChoice === 'paper' && (difficultComputerChoice === 'rock' || difficultComputerChoice === 'alien')) ||
+        (humanChoice === 'scissors' && (difficultComputerChoice === 'paper' || difficultComputerChoice === 'lizard')) ||
+        (humanChoice === 'lizard' && (difficultComputerChoice === 'paper' || difficultComputerChoice === 'alien')) ||
+        (humanChoice === 'alien' && (difficultComputerChoice === 'scissors' || difficultComputerChoice === 'rock'))
+    ) {
+        humanPlayer.wins++;
+        humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
+        chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
+     
+    } else if (humanChoice === difficultComputerChoice) {
+            chooseGameHeader.innerText = `Its a draw!`;
+    } else {
+        computerPlayer.wins++;
+        computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
+        chooseGameHeader.innerText = `Mwahahaha ${computerPlayer.name} wins again!`;
+    }
+    
 }

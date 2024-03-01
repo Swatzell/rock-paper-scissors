@@ -6,7 +6,7 @@ var classicGameView = document.querySelector(".classic-game-view");
 var classicPaperFighter = document.querySelector("#classic-paper");
 var classicRockFighter = document.querySelector("#classic-rock");
 var classicScissorsFighter = document.querySelector("#classic-scissors");
-var computerChoice = document.querySelector(".computer-choice");
+var computerChoiceDisplay = document.querySelector(".computer-choice-display");
 var computerWin = document.querySelector(".computer-win-section");
 var computerWinTally = document.querySelector(".computer-wins");
 var difficultGameBox = document.querySelector(".difficult-game-box");
@@ -16,10 +16,11 @@ var difficultRockFighter = document.querySelector("#difficult-rock");
 var difficultScissorsFighter = document.querySelector("#difficult-scissors");
 var fighterGameView = document.querySelector(".fighter-game-view");
 var gameSelectScreen = document.querySelector(".game-type-view");
+var humanChoiceDisplay = document.querySelector(".human-choice-display");
 var humanWin = document.querySelector(".human-win-section");
 var humanWinTally = document.querySelector(".human-wins");
 var lizardFighter = document.querySelector(".lizard-fighter");
-var userChoice = document.querySelector(".user-choice");
+
 
 
 
@@ -29,7 +30,90 @@ var difficultComputerChoice
 var humanPlayer = createPlayer('Human', '👱🏻');
 var computerPlayer = createPlayer('Computer', '💻')
 
+classicGameBox.addEventListener('click',showClassicGame)
+difficultGameBox.addEventListener('click',showDifficultGame)
+changeGameButton.addEventListener('click',function(){
+    changeGame()
+    })
 
+classicRockFighter.addEventListener('click',function(){
+    humanChoice = "rock"
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateClassicComputerChoice())
+    classicWinConditions()
+    })
+classicPaperFighter.addEventListener('click',function(){
+    humanChoice = "paper"
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateClassicComputerChoice())
+    classicWinConditions()
+    })
+classicScissorsFighter.addEventListener('click',function(){
+    humanChoice = "scissors"
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateClassicComputerChoice())
+    classicWinConditions()
+    })
+difficultRockFighter.addEventListener('click',function(){
+    humanChoice = "rock"    
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateDifficultComputerChoice())
+    difficultWinConditions()
+    })
+difficultPaperFighter.addEventListener('click',function(){
+    humanChoice = "paper"       
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateDifficultComputerChoice())
+    difficultWinConditions()
+    })
+difficultScissorsFighter.addEventListener('click',function(){
+    humanChoice = "scissors"        
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateDifficultComputerChoice())
+    difficultWinConditions()
+    })
+lizardFighter.addEventListener('click',function(){
+    humanChoice = "lizard"    
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateDifficultComputerChoice())
+    difficultWinConditions()
+
+    })
+alienFighter.addEventListener('click',function(){
+    humanChoice = "alien"    
+    addRemoveHumanFighter()
+    addRemoveComputerFighter(generateDifficultComputerChoice())
+    difficultWinConditions()
+    })
+
+function addRemoveHumanFighter() {
+    classicGameView.classList.add("hidden")
+    difficultGameView.classList.add("hidden")
+    fighterGameView.classList.remove("hidden")
+    if (humanChoice === "rock"){
+        humanChoiceDisplay.innerHTML = `<img class="rock-fighter" id= "rock"src="./assets/rock-hand.png" alt="rock hand"></img>`
+        } else if (humanChoice === "scissors") {
+            humanChoiceDisplay.innerHTML = `<img class="scissors-fighter" src="./assets/lines-scissors.png" alt="scissors"></img>`
+        } else if (humanChoice === "paper"){
+            humanChoiceDisplay.innerHTML = `<img      class="paper-fighter" src="./assets/happy-paper.png" alt="paper"></img>`
+        } else if (humanChoice === "lizard"){
+            humanChoiceDisplay.innerHTML = `<img class="lizard-fighter" src="./assets/iguana.png" alt="iguana"></img>`
+        } else if (humanChoice === "alien"){
+            humanChoiceDisplay.innerHTML = `<img class="alien-fighter" src="./assets/flat-alien.png" alt="alien"></img>`
+        }
+    }
+    
+function addRemoveComputerFighter(randomComputerChoice){
+    if (randomComputerChoice === "rock"){
+        computerChoiceDisplay.innerHTML = `<img class="rock-fighter" id= "rock"src="./assets/rock-hand.png" alt="rock hand"></img>`
+        } else if (randomComputerChoice === "scissors") {
+        computerChoiceDisplay.innerHTML = `<img class="scissors-fighter" src="./assets/lines-scissors.png" alt="scissors"></img>`
+        } else if (randomComputerChoice === "paper"){computerChoiceDisplay.innerHTML = `<img class="paper-fighter" src="./assets/happy-paper.png" alt="paper"></img>`
+        }else if (randomComputerChoice === "lizard"){computerChoiceDisplay.innerHTML = `<img class="lizard-fighter" src="./assets/iguana.png" alt="iguana">`
+        }else if (randomComputerChoice === "alien"){computerChoiceDisplay.innerHTML = `<img class="alien-fighter" src="./assets/flat-alien.png" alt="alien">`
+        }
+    }
+    
 
 
 
@@ -128,16 +212,16 @@ function difficultWinConditions() {
 }
 
 function resetClassicGame() {
-    userChoice.innerHTML = ""
-    computerChoice.innerHTML = ""
+    humanChoiceDisplay.innerHTML = ""
+    computerChoiceDisplay.innerHTML = ""
     classicGameView.classList.remove("hidden")
     fighterGameView.classList.add("hidden")
     chooseGameHeader.innerText = "Choose your fighter!";
     }
     
 function resetDifficultGame() {
-    userChoice.innerHTML = ""
-    computerChoice.innerHTML = ""
+    humanChoiceDisplay.innerHTML = ""
+    computerChoiceDisplay.innerHTML = ""
     difficultGameView.classList.remove("hidden")
     fighterGameView.classList.add("hidden")
     chooseGameHeader.innerText = "Choose your fighter!";

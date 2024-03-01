@@ -102,7 +102,7 @@ function classicWinConditions() {
         computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
         chooseGameHeader.innerText = `Mwahahaha ${computerPlayer.name} wins again!`;
     }
-    
+    setTimeout(resetClassicGame,2000)
 }
 
 function difficultWinConditions() {
@@ -124,5 +124,23 @@ function difficultWinConditions() {
         computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
         chooseGameHeader.innerText = `Mwahahaha ${computerPlayer.name} wins again!`;
     }
-    
+    setTimeout(resetDifficultGame,2000)
 }
+
+function resetClassicGame() {
+    userChoice.innerHTML = ""
+    computerChoice.innerHTML = ""
+    classicGameView.classList.remove("hidden")
+    fighterGameView.classList.add("hidden")
+    chooseGameHeader.innerText = "Choose your fighter!";
+    }
+    
+function resetDifficultGame() {
+    userChoice.innerHTML = ""
+    computerChoice.innerHTML = ""
+    difficultGameView.classList.remove("hidden")
+    fighterGameView.classList.add("hidden")
+    chooseGameHeader.innerText = "Choose your fighter!";
+    }
+        
+    

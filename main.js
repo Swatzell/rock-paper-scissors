@@ -170,7 +170,7 @@ function classicWinConditions() {
     humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
     chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
   } else if (humanChoice === classicComputerChoice) {
-    chooseGameHeader.innerText = `Its a draw!`;
+    chooseGameHeader.innerText = `😩 Its a draw! 😩`;
   } else {
     computerPlayer.wins++;
     computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
@@ -201,7 +201,7 @@ function difficultWinConditions() {
     humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
     chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
   } else if (humanChoice === difficultComputerChoice) {
-    chooseGameHeader.innerText = `Its a draw!`;
+    chooseGameHeader.innerText = `😩 Its a draw! 😩`;
   } else {
     computerPlayer.wins++;
     computerWinTally.innerText = `Wins:${computerPlayer.wins}`;

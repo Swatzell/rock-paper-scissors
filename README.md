@@ -20,3 +20,5 @@ Learning Goals:
 The learning goals of the project were to Solidify and demonstrate my understanding of: DRY JavaScript,event delegation to handle similar event listeners,Understand the difference between the data model and how the data is displayed on the DOM,Use my problem solving process to break down large problems, solve things step by step, and trust myself to not rely on an outside “answer” to a logical challenge
 
 
+Wins + Challenges:
+Finding the proper way to tackle this for my brain was a win. I went through a few different approaches before I found the right one for my brain to understand. Once I found the right approach I was able to complete the project early which was a huge win for me and proved to me that I actually have learned alot this mod.

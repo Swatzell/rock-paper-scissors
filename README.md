@@ -8,3 +8,8 @@ Open terminal and 'cd' into the directory you wish to clone
 Clone the repository by submitting git clone git@github.com:Swatzell/rock-paper-scissors.git
 
 Preview of App:
+
+
+Context:
+The project was assigned on Tuesday, Febuary 27th. The majority of the iterations were completed by Friday, March 1st after committing all day wednesday and thursday.
+

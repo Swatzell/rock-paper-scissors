@@ -168,13 +168,13 @@ function classicWinConditions() {
   ) {
     humanPlayer.wins++;
     humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
-    chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
+    chooseGameHeader.innerText = `${humanPlayer.token} ${humanPlayer.name} wins! ${humanPlayer.token}`;
   } else if (humanChoice === classicComputerChoice) {
-    chooseGameHeader.innerText = `Its a draw!`;
+    chooseGameHeader.innerText = `😩 Its a draw! 😩`;
   } else {
     computerPlayer.wins++;
     computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
-    chooseGameHeader.innerText = `Mwahaha ${computerPlayer.name} wins again!`;
+    chooseGameHeader.innerText = `${computerPlayer.token} Mwahaha ${computerPlayer.name} wins again! ${computerPlayer.token}`;
   }
   setTimeout(resetClassicGame, 2000);
 }
@@ -199,13 +199,13 @@ function difficultWinConditions() {
   ) {
     humanPlayer.wins++;
     humanWinTally.innerText = `Wins:${humanPlayer.wins}`;
-    chooseGameHeader.innerText = `${humanPlayer.name} wins!`;
+    chooseGameHeader.innerText = `${humanPlayer.token} ${humanPlayer.name} wins! ${humanPlayer.token}`;
   } else if (humanChoice === difficultComputerChoice) {
-    chooseGameHeader.innerText = `Its a draw!`;
+    chooseGameHeader.innerText = `😩 Its a draw! 😩`;
   } else {
     computerPlayer.wins++;
     computerWinTally.innerText = `Wins:${computerPlayer.wins}`;
-    chooseGameHeader.innerText = `Mwahaha ${computerPlayer.name} wins again!`;
+    chooseGameHeader.innerText = `${computerPlayer.token} Mwahaha ${computerPlayer.name} wins again! ${computerPlayer.token}`;
   }
   setTimeout(resetDifficultGame, 2000);
 }
